@@ -177,22 +177,26 @@ body {
     }
 }
 
-    /* Social media icons */
-.social-icons {
+/* Social Icons */
+#social-icons {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000; /* Ensure they are above other elements */
 }
 
-.social-icons img {
-    width: 40px;
+.social-icon img {
+    width: 40px; /* Set the icon size */
     height: 40px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.8; /* Slightly transparent for aesthetic */
 }
 
-.social-icons img:hover {
-    transform: scale(1.2);
+.social-icon img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    opacity: 1; /* Fully visible */
 }
-<!-- Social media icons -->
+
