@@ -177,3 +177,22 @@ body {
     }
 }
 
+    /* Social media icons */
+.social-icons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+<!-- Social media icons -->
