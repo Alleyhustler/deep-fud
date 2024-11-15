@@ -60,15 +60,34 @@
         <div class="terminal">
             <div id="ai-output" class="jacquarda-bastarda-9-charted-regular"></div>
         </div>
+    <div id="ai-interface" class="hidden">
+        <div class="terminal">
+            <div id="ai-output" class="jacquarda-bastarda-9-charted-regular"></div>
+        </div>
         <div class="social-icons">
             <a href="https://x.com/deepfud" target="_blank">
-                <img src="twitter.png" alt="Twitter">
+                <img src="images/twitter.png" alt="Twitter">
             </a>
             <a href="https://t.me/+MsT3nIO1U2lmZWVk" target="_blank">
-                <img src="telegram.png" alt="Telegram">
+                <img src="images/telegram.png" alt="Telegram">
             </a>
         </div>
     </div>
+
+    <audio id="click-sound" src="husarski-cyberwave-172902.mp3"></audio>
+    <script>
+        // Debugging Helper: Check if images are loading properly
+        window.onload = function () {
+            const twitterImg = document.querySelector('img[alt="Twitter"]');
+            const telegramImg = document.querySelector('img[alt="Telegram"]');
+
+            if (!twitterImg.complete || twitterImg.naturalWidth === 0) {
+                console.error("Twitter image is not loading correctly. Check the path.");
+            }
+            if (!telegramImg.complete || telegramImg.naturalWidth === 0) {
+                console.error("Telegram image is not loading correctly. Check the path.");
+            }
+        };
 
     <div id="loading-container" class="loading jacquarda-bastarda-9-charted-regular">
         Loading...
