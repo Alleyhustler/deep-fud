@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Jacquarda Bastarda 9 Charted", serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3a8a, #9333ea);
+    color: #ffffff;
+}
+
+/* Entry Container */
+.entry-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#entry-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.8) saturate(1.2);
+}
+
+#enter-button {
+    width: 450px; /* Set a fixed width for the button */
+    height: 200px; /* Set a fixed height for the button */
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-family: "Jersey 15", sans-serif;
+    background-image: url('Progetto\ senza\ titolo\ \(53\).png'); /* Replace with your image file */
+    background-size: cover; /* Ensures the image fully covers the button */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent; /* Removes any background color */
+    border: none; /* Ensures no border is visible */
+    border-radius: 0; /* Adjust if your box image needs rounded edges */
+    cursor: pointer;
+    transition: transform 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeInButton 1s ease-in-out forwards;
+}
+
+#enter-button.show {
+    opacity: 1;
+    visibility: visible;
+    animation-delay: 0s;
+}
+
+#enter-button:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+
+/* AI Interface */
+.hidden {
+    display: none;
+}
+
+#ai-interface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(59, 7, 100, 0.9)), 
+                url('abstract-technology-background-hacker-concept-programming-coding-binary-computer-code-matrix-background-style_87788-185\,jpeg.avif'); /* Replace with your image file */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Avoids repeating the image */
+    color: #38bdf8;
+    animation: fadeIn 2s ease-in-out;
+    overflow: hidden;
+}
+
+
+.terminal {
+    width: 90%;
+    max-width: 700px;
+    background: rgba(30, 41, 59, 0.9); /* Slight transparency for a layered effect */
+    padding: 30px;
+    border: 2px solid #4f46e5; /* Use a vibrant purple border */
+    box-shadow: 0 0 20px #7c3aed; /* Glow effect */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between terminal lines */
+    overflow-y: auto;
+    max-height: 80%; /* Ensure scrollable if content exceeds */
+}
+
+#ai-output {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    color: #cbd5e1;
+    font-family: "Jacquarda Bastarda 9 Charted", serif;
+    animation: typewriter 4s steps(40) 1s forwards; /* Typing effect */
+    opacity: 0; /* Initially hidden, revealed via animation */
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+        opacity: 1;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.terminal-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terminal-line::before {
+    content: ">"; /* Adds a command line indicator */
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* Scrollbar styling */
+.terminal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+    background: #4f46e5;
+    border-radius: 8px;
+}
+
+.terminal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+#ai-output {
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
